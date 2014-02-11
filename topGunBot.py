@@ -23,5 +23,5 @@ class TopGunBot(BotPlugin):
         if character not in self.topgun_script.CHARACTERS.keys():
             character = choice(self.topgun_script.CHARACTERS.keys())
         return '%s: "%s"' % (
-            character, self.topgun_script.get_random(character)
+            character, self.topgun_script.get_random(character).strip()
         )
